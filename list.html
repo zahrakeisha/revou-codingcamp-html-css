@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 List HTML - Sakura</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @import "tailwindcss";
+
+        @theme {
+            --color-sakura-50: #fff0f5;
+            --color-sakura-100: #ffe4ef;
+            --color-sakura-200: #ffb8d4;
+            --color-sakura-300: #ff8ab8;
+            --color-sakura-400: #f96b9e;
+            --color-sakura-500: #f0477e;
+            --color-sakura-600: #d42b63;
+            --color-sakura-700: #a81e4e;
+            --color-sakura-800: #7c1539;
+            --color-sakura-900: #500c24;
+        }
+    </style>
+    <style>
+        /* Sakura petal animation */
+        @keyframes sakura-fall {
+            0%   { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+
+        .petal {
+            position: fixed;
+            top: -20px;
+            width: 12px;
+            height: 12px;
+            background: #ffb8d4;
+            border-radius: 50% 0 50% 0;
+            animation: sakura-fall linear infinite;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.8;
+        }
+
+        .petal:nth-child(1)  { left: 5%;  animation-duration: 7s;  animation-delay: 0s;   width: 10px; height: 10px; background: #ff8ab8; }
+        .petal:nth-child(2)  { left: 15%; animation-duration: 9s;  animation-delay: 1s;   width: 14px; height: 14px; background: #ffb8d4; }
+        .petal:nth-child(3)  { left: 25%; animation-duration: 6s;  animation-delay: 2s;   width: 8px;  height: 8px;  background: #ffd6e7; }
+        .petal:nth-child(4)  { left: 35%; animation-duration: 10s; animation-delay: 0.5s; width: 12px; height: 12px; background: #ff8ab8; }
+        .petal:nth-child(5)  { left: 45%; animation-duration: 8s;  animation-delay: 3s;   width: 16px; height: 16px; background: #f96b9e; }
+        .petal:nth-child(6)  { left: 55%; animation-duration: 7s;  animation-delay: 1.5s; width: 10px; height: 10px; background: #ffb8d4; }
+        .petal:nth-child(7)  { left: 65%; animation-duration: 11s; animation-delay: 2.5s; width: 14px; height: 14px; background: #ffd6e7; }
+        .petal:nth-child(8)  { left: 75%; animation-duration: 6s;  animation-delay: 4s;   width: 8px;  height: 8px;  background: #ff8ab8; }
+        .petal:nth-child(9)  { left: 85%; animation-duration: 9s;  animation-delay: 0.8s; width: 12px; height: 12px; background: #f96b9e; }
+        .petal:nth-child(10) { left: 92%; animation-duration: 8s;  animation-delay: 3.5s; width: 10px; height: 10px; background: #ffb8d4; }
+        .petal:nth-child(11) { left: 10%; animation-duration: 12s; animation-delay: 5s;   width: 16px; height: 16px; background: #ffd6e7; }
+        .petal:nth-child(12) { left: 50%; animation-duration: 7.5s; animation-delay: 6s;  width: 9px;  height: 9px;  background: #ff8ab8; }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-pink-50 via-rose-50 to-fuchsia-50 font-sans overflow-x-hidden">
+
+    <!-- Sakura petals background -->
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+
+    <!-- Main content -->
+    <div class="relative z-10 flex flex-col items-center justify-start min-h-screen py-16 px-4">
+
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <div class="text-5xl mb-3">🌸</div>
+            <h1 class="text-4xl font-bold text-pink-700 tracking-wide drop-shadow-sm">
+                Sakura List
+            </h1>
+            <p class="text-pink-400 mt-2 text-sm tracking-widest uppercase">✿ bunga sakura yang cantik ✿</p>
+        </div>
+
+        <!-- Cards container -->
+        <div class="flex flex-col gap-8 w-full max-w-md">
+
+            <!-- Unordered List Card -->
+            <div class="bg-white/70 backdrop-blur-sm border border-pink-200 rounded-3xl shadow-lg shadow-pink-100 p-8">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="text-2xl">🍓</span>
+                    <h2 class="text-xl font-bold text-pink-600">Buah-buahan Favoritku</h2>
+                </div>
+                <ul class="space-y-3">
+                    <li class="flex items-center gap-3 bg-pink-50 rounded-2xl px-4 py-3 text-pink-800 font-medium shadow-sm hover:bg-pink-100 hover:scale-105 transition-all duration-200 cursor-default">
+                        <span class="text-lg">🥭</span> Mangga
+                    </li>
+                    <li class="flex items-center gap-3 bg-rose-50 rounded-2xl px-4 py-3 text-rose-800 font-medium shadow-sm hover:bg-rose-100 hover:scale-105 transition-all duration-200 cursor-default">
+                        <span class="text-lg">🍌</span> Pisang
+                    </li>
+                    <li class="flex items-center gap-3 bg-fuchsia-50 rounded-2xl px-4 py-3 text-fuchsia-800 font-medium shadow-sm hover:bg-fuchsia-100 hover:scale-105 transition-all duration-200 cursor-default">
+                        <span class="text-lg">🍈</span> Jambu
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Ordered List Card -->
+            <div class="bg-white/70 backdrop-blur-sm border border-pink-200 rounded-3xl shadow-lg shadow-pink-100 p-8">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="text-2xl">🌿</span>
+                    <h2 class="text-xl font-bold text-pink-600">Cara Buat Repo GitHub</h2>
+                </div>
+                <ol class="space-y-3">
+                    <li class="flex items-center gap-4 bg-pink-50 rounded-2xl px-4 py-3 text-pink-800 font-medium shadow-sm hover:bg-pink-100 hover:scale-105 transition-all duration-200 cursor-default">
+                        <span class="w-7 h-7 flex items-center justify-center rounded-full bg-pink-400 text-white text-sm font-bold shrink-0 shadow">1</span>
+                        Buka GitHub
+                    </li>
+                    <li class="flex items-center gap-4 bg-rose-50 rounded-2xl px-4 py-3 text-rose-800 font-medium shadow-sm hover:bg-rose-100 hover:scale-105 transition-all duration-200 cursor-default">
+                        <span class="w-7 h-7 flex items-center justify-center rounded-full bg-rose-400 text-white text-sm font-bold shrink-0 shadow">2</span>
+                        Buka Repo
+                    </li>
+                    <li class="flex items-center gap-4 bg-fuchsia-50 rounded-2xl px-4 py-3 text-fuchsia-800 font-medium shadow-sm hover:bg-fuchsia-100 hover:scale-105 transition-all duration-200 cursor-default">
+                        <span class="w-7 h-7 flex items-center justify-center rounded-full bg-fuchsia-400 text-white text-sm font-bold shrink-0 shadow">3</span>
+                        Isi Nama Repo
+                    </li>
+                    <li class="flex items-center gap-4 bg-pink-50 rounded-2xl px-4 py-3 text-pink-800 font-medium shadow-sm hover:bg-pink-100 hover:scale-105 transition-all duration-200 cursor-default">
+                        <span class="w-7 h-7 flex items-center justify-center rounded-full bg-pink-500 text-white text-sm font-bold shrink-0 shadow">4</span>
+                        Klik Create ✨
+                    </li>
+                </ol>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-16 text-pink-300 text-xs tracking-widest flex gap-2 items-center">
+            <span>🌸</span><span>made with love & tailwind</span><span>🌸</span>
+        </div>
+
+    </div>
+
+</body>
+</html>
